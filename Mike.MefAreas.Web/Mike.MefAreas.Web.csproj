@@ -78,7 +78,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IoC\AssemblyResourceVirtualPathProvider.cs" />
-    <Compile Include="IoC\AddinInstaller.cs" />
+    <Compile Include="IoC\CommonComponentInstaller.cs" />
     <Compile Include="IoC\CoreComponentsInstaller.cs" />
     <Compile Include="IoC\IocControllerFactory.cs" />
     <Compile Include="Models\AccountModels.cs" />

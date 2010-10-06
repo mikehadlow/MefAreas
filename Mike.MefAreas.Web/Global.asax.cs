@@ -52,7 +52,7 @@ namespace Mike.MefAreas.Web
                 foreach (var lazyInstaller in lazyInstallers)
                 {
                     var installer = lazyInstaller.Value;
-                    Container.Install(new AddinInstaller(installer.GetType().Assembly));
+                    Container.Install(new CommonComponentInstaller(installer.GetType().Assembly));
                     installer.DoRegistration(Container);
                 }
             }
@@ -62,7 +62,7 @@ namespace Mike.MefAreas.Web
         {
             container = new WindsorContainer()
                 .Install(new CoreComponentsInstaller())
-                .Install(new AddinInstaller(Assembly.GetExecutingAssembly()));
+                .Install(new CommonComponentInstaller(Assembly.GetExecutingAssembly()));
 
             var controllerFactory = Container.Resolve<IControllerFactory>();
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);

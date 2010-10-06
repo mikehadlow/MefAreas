@@ -8,11 +8,11 @@ using Mike.MefAreas.Core.Services;
 namespace Mike.MefAreas.Web.IoC
 {
     // this installer is installed for all addins.
-    public class AddinInstaller : IWindsorInstaller
+    public class CommonComponentInstaller : IWindsorInstaller
     {
         readonly Assembly assembly;
 
-        public AddinInstaller(Assembly assembly)
+        public CommonComponentInstaller(Assembly assembly)
         {
             this.assembly = assembly;
         }

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mike.MefAreas.Core", "Mike.MefAreas.Core\Mike.MefAreas.Core.csproj", "{361D0F30-1C9E-4EC4-9A50-7B8DB679178F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mike.MefAreas.Web", "Mike.MefAreas.Web\Mike.MefAreas.Web.csproj", "{C372CE14-126C-4779-95F8-A377563B9306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mike.MefAreas.AddIn", "Mike.MefAreas.AddIn\Mike.MefAreas.AddIn.csproj", "{DE97D23B-1467-4E89-957B-524EF95E23B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{361D0F30-1C9E-4EC4-9A50-7B8DB679178F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{361D0F30-1C9E-4EC4-9A50-7B8DB679178F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{361D0F30-1C9E-4EC4-9A50-7B8DB679178F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{361D0F30-1C9E-4EC4-9A50-7B8DB679178F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C372CE14-126C-4779-95F8-A377563B9306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C372CE14-126C-4779-95F8-A377563B9306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C372CE14-126C-4779-95F8-A377563B9306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C372CE14-126C-4779-95F8-A377563B9306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE97D23B-1467-4E89-957B-524EF95E23B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE97D23B-1467-4E89-957B-524EF95E23B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE97D23B-1467-4E89-957B-524EF95E23B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE97D23B-1467-4E89-957B-524EF95E23B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

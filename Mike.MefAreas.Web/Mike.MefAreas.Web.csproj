@@ -82,7 +82,8 @@
     <Compile Include="Installers\ControllerFactoryInstaller.cs" />
     <Compile Include="IoC\IocControllerFactory.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Navigation\NavigationProviders.cs" />
+    <Compile Include="Navigation\AboutNavigation.cs" />
+    <Compile Include="Navigation\HomeNavigation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

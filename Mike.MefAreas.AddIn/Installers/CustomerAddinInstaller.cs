@@ -14,9 +14,9 @@ namespace Mike.MefAreas.AddIn.Installers
         {
             container.Register(
                 Component.For<IController>().ImplementedBy<CustomerController>()
-                    .Named("customercontroller").LifeStyle.Transient,
+                    .Named("CustomerController").LifeStyle.Transient,
                 Component.For<INavigation>().ImplementedBy<CustomerNavigation>()
-                    .Named("customernavigation").LifeStyle.Transient
+                    .Named("CustomerNavigation").LifeStyle.Transient
                 );
         }
     }

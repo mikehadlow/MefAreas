@@ -15,7 +15,7 @@ namespace Mike.MefAreas.Web.Installers
                     .BasedOn<INavigation>()
                     .WithService.Base()
                     .Configure(c => c.LifeStyle.Transient
-                                        .Named(c.Implementation.Name.ToLower()))
+                                        .Named(c.Implementation.Name))
                 );
         }
     }

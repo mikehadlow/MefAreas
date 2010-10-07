@@ -25,14 +25,14 @@ namespace Mike.MefAreas.Web.IoC
                 throw new ArgumentNullException("controllerName");
             }
 
-            var componentName = controllerName.ToLower() + "controller";
-
-            if (!kernel.HasComponent(componentName))
+            try
             {
-                throw new ApplicationException(string.Format("No controller with name '{0}' found", componentName));
+                return kernel.Resolve<IController>(controllerName + "controller");
             }
-
-            return kernel.Resolve<IController>(componentName);
+            catch (ComponentNotFoundException e)
+            {
+                throw new ApplicationException(string.Format("No controller with name '{0}' found", controllerName), e);
+            }
         }
 
         public void ReleaseController(IController controller)

@@ -41,7 +41,6 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
@@ -77,9 +76,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Installers\ControllersInstaller.cs" />
     <Compile Include="IoC\AssemblyResourceVirtualPathProvider.cs" />
-    <Compile Include="IoC\CommonComponentInstaller.cs" />
-    <Compile Include="IoC\CoreComponentsInstaller.cs" />
+    <Compile Include="Installers\NavigationsInstaller.cs" />
+    <Compile Include="Installers\ControllerFactoryInstaller.cs" />
     <Compile Include="IoC\IocControllerFactory.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Navigation\NavigationProviders.cs" />

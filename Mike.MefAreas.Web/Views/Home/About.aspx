@@ -7,6 +7,6 @@
 <asp:Content ID="aboutContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>About</h2>
     <p>
-        An Experiment in using MEF to compose web apps.
+        An Experiment in using Windsor to compose web apps.
     </p>
 </asp:Content>

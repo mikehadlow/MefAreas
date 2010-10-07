@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Controllers\AddinControllerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\IAddinInstaller.cs" />
     <Compile Include="Services\INavigation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

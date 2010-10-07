@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
+using Mike.MefAreas.AddIn.Views.Customer;
 using Mike.MefAreas.Core.Controllers;
 
 namespace Mike.MefAreas.AddIn.Controllers
@@ -18,11 +19,5 @@ namespace Mike.MefAreas.AddIn.Controllers
 
             return View("Index", customers);
         }
-    }
-
-    public class CustomerView
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
     }
 }

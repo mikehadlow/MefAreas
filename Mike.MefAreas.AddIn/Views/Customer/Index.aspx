@@ -1,5 +1,6 @@
 <%@ Page Title="" Language="C#" Inherits="System.Web.Mvc.ViewPage" MasterPageFile="~/Views/Shared/Site.Master" %>
 <%@ Import Namespace="Mike.MefAreas.AddIn.Controllers" %>
+<%@ Import Namespace="Mike.MefAreas.AddIn.Views.Customer" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">Customers</asp:Content>
 

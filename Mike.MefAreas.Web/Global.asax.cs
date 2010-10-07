@@ -1,11 +1,10 @@
-﻿using System.ComponentModel.Composition.Hosting;
-using System.Reflection;
-using System.Web;
+﻿using System.Web;
 using System.Web.Hosting;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using Mike.MefAreas.Core.Services;
+using Castle.Windsor.Installer;
 using Mike.MefAreas.Web.IoC;
 
 namespace Mike.MefAreas.Web
@@ -32,7 +31,6 @@ namespace Mike.MefAreas.Web
             RegisterRoutes(RouteTable.Routes);
 
             InitializeWindsor();
-            InitializeAddins();
         }
 
         protected void Application_End()
@@ -44,25 +42,11 @@ namespace Mike.MefAreas.Web
             }
         }
 
-        void InitializeAddins()
-        {
-            using (var mefContainer = new CompositionContainer(new DirectoryCatalog(HttpRuntime.BinDirectory, "*AddIn.dll")))
-            {
-                var lazyInstallers = mefContainer.GetExports<IAddinInstaller>();
-                foreach (var lazyInstaller in lazyInstallers)
-                {
-                    var installer = lazyInstaller.Value;
-                    Container.Install(new CommonComponentInstaller(installer.GetType().Assembly));
-                    installer.DoRegistration(Container);
-                }
-            }
-        }
-
         void InitializeWindsor()
         {
             container = new WindsorContainer()
-                .Install(new CoreComponentsInstaller())
-                .Install(new CommonComponentInstaller(Assembly.GetExecutingAssembly()));
+                .Install(FromAssembly.This(),
+                         FromAssembly.InDirectory(new AssemblyFilter(HttpRuntime.BinDirectory, "*AddIn.dll")));
 
             var controllerFactory = Container.Resolve<IControllerFactory>();
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);

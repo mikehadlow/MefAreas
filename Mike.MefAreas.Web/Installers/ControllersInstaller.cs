@@ -13,9 +13,8 @@ namespace Mike.MefAreas.Web.Installers
                 AllTypes
                     .FromThisAssembly()
                     .BasedOn<IController>()
-                    .WithService.Base()
                     .Configure(c => c.LifeStyle.Transient
-                                        .Named(c.Implementation.Name.ToLower()))
+                                        .Named(c.Implementation.Name))
                 );
         }
     }
